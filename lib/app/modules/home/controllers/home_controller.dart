@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
-import '../../../data/models/cities_model.dart';
 
 class HomeController extends GetxController {
   List<dynamic> dataCity = [].obs;
