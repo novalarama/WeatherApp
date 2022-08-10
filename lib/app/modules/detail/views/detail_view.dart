@@ -56,7 +56,7 @@ class DetailView extends GetView<DetailController> {
                           ),
                           SizedBox(height: 50),
                           Text(
-                            '${controller.city!.name}',
+                            '${controller.city.name}',
                             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
                           ),
                           Text(
