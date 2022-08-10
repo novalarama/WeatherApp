@@ -7,10 +7,9 @@ import '../../../constants/constants.dart';
 import '../controllers/detail_controller.dart';
 
 class DetailView extends GetView<DetailController> {
-  Map<dynamic, dynamic>? allCityData = Get.arguments;
   @override
   Widget build(BuildContext context) {
-    if (allCityData != null) {
+    if (controller.city != null) {
       return Scaffold(
           body: FutureBuilder<Map<String, dynamic>>(
         future: controller.getDetailWeather(),
@@ -57,7 +56,7 @@ class DetailView extends GetView<DetailController> {
                           ),
                           SizedBox(height: 50),
                           Text(
-                            '${allCityData!['name']}',
+                            '${controller.city!.name}',
                             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
                           ),
                           Text(

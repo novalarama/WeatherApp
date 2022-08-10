@@ -8,7 +8,7 @@ void main() {
   runApp(
     GetMaterialApp(
       theme: ThemeData(
-        fontFamily: 'Poppins', 
+        fontFamily: 'PlusJakartaDisplay', 
       ),
       title: "Application",
       initialRoute: AppPages.INITIAL,

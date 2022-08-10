@@ -17,15 +17,15 @@ class Cities {
 }
 
 class Data {
-  List<Cities>? cities;
+  List<City>? cities;
 
   Data({this.cities});
 
   Data.fromJson(Map<String, dynamic> json) {
     if (json['cities'] != null) {
-      cities = <Cities>[];
+      cities = <City>[];
       json['cities'].forEach((v) {
-        cities?.add(Cities.fromJson(v));
+        cities?.add(City.fromJson(v));
       });
     }
   }
@@ -39,7 +39,7 @@ class Data {
   }
 }
 
-class allCities {
+class City {
   int? id;
   int? regionId;
   String? slug;
@@ -52,7 +52,7 @@ class allCities {
   bool? active;
   dynamic status;
 
-  allCities(
+  City(
       {this.id,
       this.regionId,
       this.slug,
@@ -65,7 +65,7 @@ class allCities {
       this.active,
       this.status});
 
-  allCities.fromJson(Map<String, dynamic> json) {
+  City.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     regionId = json['region_id'];
     slug = json['slug'];

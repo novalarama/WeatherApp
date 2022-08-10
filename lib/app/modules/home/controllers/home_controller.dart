@@ -1,16 +1,18 @@
+import 'package:app_weather/app/data/models/cities_model.dart';
 import 'package:get/get.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 
 class HomeController extends GetxController {
-  List<dynamic> dataCity = [].obs;
+  final dataCity = <City>[].obs;
 
-  Future<dynamic> ReadJson() async {
+  Future<void> ReadJson() async {
     var jsonData = await rootBundle.loadString('assets/models/cities.json');
-    final list = json.decode(jsonData)['data']['cities'] as List<dynamic>;
+    final list = json.decode(jsonData);
 
-    dataCity = list;
-    update();
+    dataCity.value = Cities.fromJson(list).data!.cities!;
+
+    // update();
   }
 
   @override
