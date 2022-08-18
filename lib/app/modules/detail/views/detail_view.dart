@@ -15,6 +15,7 @@ class DetailView extends GetView<DetailController> {
         future: controller.getDetailWeather(),
         builder: (context, snapshot) {
           if (snapshot.connectionState != ConnectionState.waiting) {
+            print(snapshot.data);
             Map<dynamic, dynamic> dataWeather = Map.from(snapshot.data!);
             var celcius = dataWeather['temp'] - 273;
 
@@ -80,7 +81,11 @@ class DetailView extends GetView<DetailController> {
                                     children: [
                                       Column(
                                         children: [
-                                          Icon(Icons.sunny, size: 40, color: Colors.blueGrey.shade900,),
+                                          Icon(
+                                            Icons.sunny,
+                                            size: 40,
+                                            color: Colors.blueGrey.shade900,
+                                          ),
                                           SizedBox(height: 10),
                                           Text(
                                             '${dataWeather['uvi']}',
@@ -92,7 +97,11 @@ class DetailView extends GetView<DetailController> {
                                       ),
                                       Column(
                                         children: [
-                                          Icon(Icons.cloud, size: 40, color: Colors.blueGrey.shade900,),
+                                          Icon(
+                                            Icons.cloud,
+                                            size: 40,
+                                            color: Colors.blueGrey.shade900,
+                                          ),
                                           SizedBox(height: 10),
                                           Text(
                                             '${dataWeather['clouds']}',

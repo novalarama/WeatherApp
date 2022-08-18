@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:app_weather/app/modules/detail/controllers/detail_controller.dart';
 import 'package:get/get.dart';
 import 'package:app_weather/app/routes/app_pages.dart';
 import '../controllers/home_controller.dart';

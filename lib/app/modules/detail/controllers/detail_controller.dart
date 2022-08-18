@@ -2,14 +2,11 @@ import 'package:app_weather/app/data/models/cities_model.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as connect;
 import 'dart:convert';
-import '../../../data/models/weather_model.dart';
 
 class DetailController extends GetxController {
   final City city = Get.arguments;
 
   Future<Map<String, dynamic>> getDetailWeather() async {
-    // var cityData = <String, dynamic>{}.obs;
-
     var lat = city.latitude;
     var long = city.longitude;
 
