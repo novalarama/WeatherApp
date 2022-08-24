@@ -1,9 +1,5 @@
-import 'package:app_weather/app/data/models/weather_model.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
-import '../../../constants/constants.dart';
 import '../controllers/detail_controller.dart';
 
 class DetailView extends GetView<DetailController> {
