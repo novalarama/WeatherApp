@@ -120,11 +120,14 @@ class DetailView extends GetView<DetailController> {
               ),
             );
           } else {
-            return Center(
-              child: Column(
-                children: [
-                  CircularProgressIndicator()
-                ],
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                child: Column(
+                  children: [
+                    CircularProgressIndicator()
+                  ],
+                ),
               ),
             );
           }

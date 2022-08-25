@@ -1,5 +1,4 @@
 import 'package:app_weather/app/data/models/cities_model.dart';
-import 'package:flutter/src/widgets/basic.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as connect;
 import 'dart:convert';
