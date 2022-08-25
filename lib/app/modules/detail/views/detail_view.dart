@@ -14,7 +14,6 @@ class DetailView extends GetView<DetailController> {
             print(snapshot.data);
             Map<dynamic, dynamic> dataWeather = Map.from(snapshot.data!);
             var celcius = dataWeather['temp'] - 273;
-
             return Center(
               child: Container(
                 padding: EdgeInsets.all(15),
@@ -53,7 +52,7 @@ class DetailView extends GetView<DetailController> {
                           ),
                           SizedBox(height: 50),
                           Text(
-                            '${controller.city.name}',
+                            '${controller.city!.name}',
                             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
                           ),
                           Text(
@@ -124,11 +123,7 @@ class DetailView extends GetView<DetailController> {
             return Center(
               child: Column(
                 children: [
-                  Text('Sorry Data Has not been Found'),
-                  ElevatedButton(
-                    onPressed: () => Get.back(),
-                    child: null,
-                  ),
+                  CircularProgressIndicator()
                 ],
               ),
             );
