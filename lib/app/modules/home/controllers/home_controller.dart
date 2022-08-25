@@ -13,6 +13,7 @@ class HomeController extends GetxController {
     getDataCity();
   }
 
+  
   void getDataCity() async {
     var jsonData = await rootBundle.loadString('assets/models/cities.json');
     final list = json.decode(jsonData);
