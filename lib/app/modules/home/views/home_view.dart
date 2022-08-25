@@ -23,7 +23,6 @@ class HomeView extends GetView<HomeController> {
           itemBuilder: (context, index) {
             if (index < controller.dataCity.length) {
               var cities = controller.dataCity;
-              var celcius = controller.weatherOfCity.value.temp! - 273;
               return Padding(
                 padding: EdgeInsets.only(top: 10, left: 15, right: 15),
                 child: InkWell(
@@ -46,10 +45,6 @@ class HomeView extends GetView<HomeController> {
                         children: [
                           Text(
                             cities[index].name ?? "Not Found",
-                            style: TextStyle(color: textColor, fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
-                          ),
-                          Text(
-                            "${celcius}•C",
                             style: TextStyle(color: textColor, fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'Poppins'),
                           ),
                         ],
